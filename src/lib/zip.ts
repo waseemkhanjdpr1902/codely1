@@ -1,13 +1,5 @@
-import JSZip from "jszip";
+export async function exportZip(files: any[]) {
+  console.log("ZIP export placeholder", files);
 
-export async function exportZip(files) {
-  const zip = new JSZip();
-
-  files.forEach((f) => {
-    zip.file(f.path, f.content);
-  });
-
-  return await zip.generateAsync({
-    type: "blob"
-  });
+  return null;
 }
