@@ -1,16 +1,14 @@
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  const body = await req.json();
-  const prompt = body.prompt;
+  const { prompt } = await req.json();
 
-  // temporary response
   return NextResponse.json({
     success: true,
     files: [
       {
         path: "app/page.tsx",
-        content: `<div>${prompt}</div>`
+        content: `<div class="p-10">${prompt}</div>`
       }
     ]
   });
