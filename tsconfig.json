@@ -13,8 +13,18 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [{ "name": "next" }],
-    "paths": { "@/*": ["./*"] }
+
+    "baseUrl": ".",
+
+    "paths": {
+      "@/*": ["./*"]
+    },
+
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
