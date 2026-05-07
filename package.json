@@ -1,5 +1,5 @@
 {
-  "name": "codely1",
+  "name": "codely",
   "private": true,
   "scripts": {
     "dev": "next dev",
