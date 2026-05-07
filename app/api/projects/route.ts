@@ -1,16 +1,18 @@
 import { NextResponse } from "next/server";
-import { admin } from "../../../lib/admin";
+import { createAdminClient } from "../../../lib/server/supabase";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { data, error } = await admin
+    const supabase = createAdminClient();
+
+    const { data, error } = await supabase
       .from("projects")
       .insert({
-        title: body.title,
-        prompt: body.prompt,
-        generated_code: body.generated_code
+        title: body.title || "Untitled",
+        prompt: body.prompt || "",
+        generated_code: body.generated_code || ""
       })
       .select()
       .single();
@@ -28,12 +30,8 @@ export async function POST(req: Request) {
     });
   } catch (error: any) {
     return NextResponse.json(
-      {
-        error: error.message
-      },
-      {
-        status: 500
-      }
+      { error: error.message },
+      { status: 500 }
     );
   }
 }
