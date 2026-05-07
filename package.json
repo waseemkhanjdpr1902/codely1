@@ -1,5 +1,5 @@
 {
-  "name": "codely",
+  "name": "codely1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,5 +11,10 @@
     "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "@types/react": "^19.0.10",
+    "@types/node": "^20.17.6"
   }
 }
