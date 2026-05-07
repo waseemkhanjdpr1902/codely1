@@ -12,19 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-
-    "baseUrl": ".",
-
-    "paths": {
-      "@/*": ["./*"]
-    },
-
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "incremental": true
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
