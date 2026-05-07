@@ -1,7 +1,16 @@
 export default function Page() {
   return (
-    <div style={{ padding: 50, fontSize: 30, background: "red", color: "white" }}>
-      🔥 CODELY TEST PAGE - IF YOU SEE THIS, BUILD IS WORKING
+    <div style={{
+      height: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontSize: "32px",
+      fontWeight: "bold",
+      background: "white",
+      color: "black"
+    }}>
+      🚀 CODELY CLEAN ENTRY WORKING
     </div>
   );
 }
